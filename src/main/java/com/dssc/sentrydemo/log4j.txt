@@ -1,0 +1,28 @@
+#Configuration:
+#  properties:
+#    property:
+#      - name: pattern
+#        value: "%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"
+#  status: "warn"
+#  packages: "org.apache.logging.log4j.core,io.sentry.log4j2"
+#  Appenders:
+#    Console:
+#      - name: "Console"
+#        target: "SYSTEM_OUT"
+#        PatternLayout:
+#          pattern: "${pattern}"
+#    Sentry:
+#      - name: "Sentry"
+#      - dsn: https://7f2305f19a334b349dcb070b0f9b2779@o736540.ingest.sentry.io/5784995/
+#
+#  Loggers:
+#    Root:
+#      level: "info"
+#      AppenderRef:
+#        - ref: "Console"
+#        - ref: "Sentry"
+#Sentry:
+#  - name: "Sentry"
+#  - dsn: "https://3d91f10f1d184515b3d434bdc0d906a4@o19635.ingest.sentry.io/7130"
+#  - minimumBreadcrumbLevel: "DEBUG"
+#  - minimumEventLevel: "WARN"
